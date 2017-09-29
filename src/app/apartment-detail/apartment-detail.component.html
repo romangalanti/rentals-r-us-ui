@@ -1,0 +1,39 @@
+<div>
+  <h2>Rent: ${{apartment.rent}}</h2>
+  {{apartment.address}}<br>
+  {{apartment.city}}, 
+  {{apartment.state}} 
+  {{apartment.zip_code}}<br>
+</div>
+
+<ul>
+  <li>number of bedrooms: {{apartment.number_of_bedrooms}}</li>
+  <li>number of bathrooms: {{apartment.number_of_bathrooms}}</li>
+  <li>square footage: {{apartment.square_footage}}</li>
+  <li>number of likes: {{apartment.number_of_likes}}</li>
+</ul>
+
+<form (submit)="activateListing()">
+  <button *ngIf="!apartment.is_active && userIsOwner">Activate listing</button>
+  </form>
+
+  <form (submit)="deactivateListing()">
+  <button *ngIf="apartment.is_active && userIsOwner">Deactivate listing</button>
+  </form>
+
+  <form (submit)="likeListing()">
+  <button>Like this apartment</button>
+  </form>
+
+
+
+  
+
+  
+  
+  
+  
+  
+
+
+
